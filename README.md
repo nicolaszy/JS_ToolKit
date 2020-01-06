@@ -56,6 +56,9 @@ filter: nur Elemente, welche mit Fkt. zu true evaluieren behalten: </br>
 reduce: Elemente miteinander verarbeiten: </br>
 <code> const addCurrentToTotal = (acc,cur) => acc+cur </code></br>
 <code> [1,2,3].reduce(addCurrentToTotal); </code></br> 
+Für den Fall dass die Liste leer ist kann auch ein Startwert mitgegeben werden: </br>
+<code> [1,2,3].reduce(addCurrentToTotal,0); </code></br> 
+
 </br>
 Data Structures:
 
