@@ -81,8 +81,27 @@ Nun müssen wir jeweils das erste oder zweite Element aus diesem Pair rauslesen 
 <code>const fst = x => y => x;</code></br>
 <code>const snd = x => y => y;</code></br>
 Damit haben wir alles das wir alles das wir brauchen: </br>
-pair(8)(9)(fst) selektiert das erste und pair(8)(9)(snd) das zweite Element! 
+pair(8)(9)(fst) selektiert das erste und pair(8)(9)(snd) das zweite Element! </br>
+Um das Pair auch mit fst(pair(8)(9)) selektieren zu können, benötigen wir erneut die Identität und die konstante Fkt:
+<code>const id = x => x;
+const konst = x => y => x;</code></br>
+Nun können wir True definieren als: </br>
+<code>const T = konst;</code></br>
+Und false als: </br>
+<code>const F = konst(id);</code></br> 
+Nun können wir fst und snd neu definieren, diese mal aber als Funktionen, die eine Fkt. entgegennehmen und damit True oder False aufrufen: </br>
+<code>const fst = p => p(T);</code></br> 
+<code>const snd = p => p(F);</code></br> 
+Nun können wir auch fst(pair(8)(9)) aufrufen, um die Zahl 8 wieder zu erhalten. </br>
 
 
+Wir können sogar weiter gehen und ein Objekt Person aus diesen Pairs erstellen: </br>
+<code>const person = 
+firstname =>
+lastname =>
+age =>
+pair (pair(firstname)(lastname)) (age);</code></br>
+
+Nun können wir wie vorher mit 
 
 
