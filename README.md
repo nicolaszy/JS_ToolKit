@@ -21,15 +21,30 @@ auch möglich:
 [...x,...x].reverse() oder [-1,...x].reverse() </br>
 </code>
 </br>
+Arrays können wie alle JS Objekte um weitere Funktionen erweitert werden. Beispiel: </br>
+<code>Array.prototype.eq = function(ys){ </code></br>
+            <code>if(this.length != ys.length){
+                return false; 
+            }</code></br>
+            <code>let equals = true;</code></br>
+            <code>this.forEach( (x, index) => {
+            </code></br>
+            <code>if(x!==ys[index]){
+                equals = false;
+            }
+            })</code></br>
+            <code>return equals;</code></br>
+         <code>}</code></br>
 </br>
-JS Scopes:
+</br>
+JS Scopes: </br>
 <code>x = … -> mutable, global scope (in scope after first use) </code></br>
 <code>var x = … -> mutable, “hoisted” scope (egal wo das var hingeschrieben wird, es wird so behandelt als wäre es am Anfang der Fkt. hingeschrieben worden, aber Scope is Funktion!) </code></br>
 <code>let x = …. -> mutable, local scope </code></br>
 <code>const x = … -> immutable, local scope </code></br>
 </code> </br>
 </br>
-Functions:
+Functions: </br>
 <code>function foo(){…}; foo() </code></br>
 <code>(function foo(){…})(); </code></br>
 <code>(function(){…})(); </code></br>
