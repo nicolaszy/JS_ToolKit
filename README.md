@@ -29,6 +29,17 @@ JS Scopes:
 <code>const x = … -> immutable, local scope </code></br>
 </code> </br>
 </br>
+Functions:
+<code>function foo(){…}; foo() </code></br>
+<code>(function foo(){…})(); </code></br>
+<code>(function(){…})(); </code></br>
+<code>( () => {…} )(); //most compact </code></br>
+mit Function constructor: </br>
+<code> const sum = new Function('a', 'b', 'return a + b');</code></br>
+und dann so aufrufen:
+<code> sum(5, 10); </code></br>
+
+
 Data Structures:
 
 
