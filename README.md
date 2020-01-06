@@ -75,7 +75,14 @@ Für den Fall dass die Liste leer ist kann auch ein Startwert mitgegeben werden:
 <code> [1,2,3].reduce(addCurrentToTotal,0); </code></br> 
 
 </br>
-Data Structures:
+Data Structures:</br>
+<code>const pair = x => y => f => f(x)(y);</code></br>
+Nun müssen wir jeweils das erste oder zweite Element aus diesem Pair rauslesen können:
+<code>const fst = x => y => x;</code></br>
+<code>const snd = x => y => y;</code></br>
+Damit haben wir alles das wir alles das wir brauchen: </br>
+pair(8)(9)(fst) selektiert das erste und pair(8)(9)(snd) das zweite Element! 
+
 
 
 
