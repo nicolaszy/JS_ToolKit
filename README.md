@@ -38,8 +38,25 @@ mit Function constructor: </br>
 <code> const sum = new Function('a', 'b', 'return a + b');</code></br>
 und dann so aufrufen:
 <code> sum(5, 10); </code></br>
-
-
+</br>
+</br>
+Lambda Kalkül: </br> 
+identity: </br>
+<code> const id = x => x; </code></br>
+times: </br>
+<code>const times = a => b => a*b; </code></br>
+Aufruf: </br>
+<code>const times(2)(3) </code></br>
+Wichtig: times(2) gibt uns eine Funktion, die wir auch später noch mit der zweiten Zahl aufrufen können (lazy evaluation) </br>
+map: Funktion auf alle Elemente eines Arrays anwenden: <br>
+<code>[1,2,3].map(x => times(2)(x)) //multipliziert alle Zahlen mit 2 </code></br> 
+filter: nur Elemente, welche mit Fkt. zu true evaluieren behalten: </br>
+<code> const odd = x => x % 2 === 1; </code></br> 
+<code> [1,2,3].filter(odd); </code></br> 
+reduce: Elemente miteinander verarbeiten: </br>
+<code> const addCurrentToTotal = (acc,cur) => acc+cur </code></br>
+<code> [1,2,3].reduce(addCurrentToTotal); </code></br> 
+</br>
 Data Structures:
 
 
