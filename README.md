@@ -22,6 +22,13 @@ auch möglich:
 </code>
 </br>
 </br>
+JS Scopes:
+<code>x = … -> mutable, global scope (in scope after first use) </code></br>
+<code>var x = … -> mutable, “hoisted” scope (egal wo das var hingeschrieben wird, es wird so behandelt als wäre es am Anfang der Fkt. hingeschrieben worden, aber Scope is Funktion!) </code></br>
+<code>let x = …. -> mutable, local scope </code></br>
+<code>const x = … -> immutable, local scope </code></br>
+</code> </br>
+</br>
 Data Structures:
 
 
