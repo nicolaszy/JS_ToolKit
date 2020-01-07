@@ -102,6 +102,7 @@ lastname =>
 age =>
 pair (pair(firstname)(lastname)) (age);</code></br>
 
-Nun können wir wie vorher mit 
+Nun können wir wie vorher mit Pair Informationen herauslesen: </br>
 
+<code>const getFirstName = p => fst(fst(p)); //holt das erste Pair, welches den Namen enthält und daraus den Vornamen</code></br>
 
