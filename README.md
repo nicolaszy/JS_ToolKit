@@ -103,9 +103,10 @@ pair (pair(firstname)(lastname)) (age);</code></br>
 Nun können wir wie vorher mit Pair Informationen herauslesen: </br>
 <code>const getFirstName = p => fst(fst(p)); //holt das erste Pair, welches den Namen enthält und daraus den Vornamen</code></br>
 Gleich wie ein Pair können wir auch ein Triple erstellen: </br>
-<code>const Triple = x => y => z => f => f(x)(y)(z);</code></br>
+<code>const triple = x => y => z => f => f(x)(y)(z);</code></br>
 Nun brauchen wir ein fst, snd und trd, um jeweils eines der drei selektieren zu können:</br>
 <code>const fst = x => y => z => x;</code></br>
 <code>const snd  = x => y => z => y;</code></br>
 <code>const trd  = x => y => z => z;</code></br>
-Wir können nun triple mit <code>const t = Triple(8)(9)(10)</code> initialisieren und mit <code>t(fst)</code> das erste Element herauslesen. 
+Wir können nun triple mit <code>const t = triple(8)(9)(10)</code> initialisieren und mit <code>t(fst)</code> das erste Element herauslesen. </br>
+Der Vorteil dieser Datenstrukturen ist, dass sie immutable sind. Es gibt keine Möglichkeiten, das triple oder das pair nach dem Initialisieren noch zu ändern. Es gibt also keine Sicherheitslücken. 
