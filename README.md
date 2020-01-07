@@ -94,15 +94,18 @@ Nun können wir fst und snd neu definieren, diese mal aber als Funktionen, die e
 <code>const snd = p => p(F);</code></br> 
 Nun können wir auch fst(pair(8)(9)) aufrufen, um die Zahl 8 wieder zu erhalten. </br>
 
-
 Wir können sogar weiter gehen und ein Objekt Person aus diesen Pairs erstellen: </br>
 <code>const person = 
 firstname =>
 lastname =>
 age =>
 pair (pair(firstname)(lastname)) (age);</code></br>
-
 Nun können wir wie vorher mit Pair Informationen herauslesen: </br>
-
 <code>const getFirstName = p => fst(fst(p)); //holt das erste Pair, welches den Namen enthält und daraus den Vornamen</code></br>
-
+Gleich wie ein Pair können wir auch ein Triple erstellen: </br>
+<code>const Triple = x => y => z => f => f(x)(y)(z);</code></br>
+Nun brauchen wir ein fst, snd und trd, um jeweils eines der drei selektieren zu können:</br>
+<code>const fst = x => y => z => x;</code></br>
+<code>const snd  = x => y => z => y;</code></br>
+<code>const trd  = x => y => z => z;</code></br>
+Wir können nun triple mit <code>const t = Triple(8)(9)(10)</code> initialisieren und mit <code>t(fst)</code> das erste Element herauslesen. 
